@@ -15,9 +15,7 @@ class DraggerState extends State<Dragger> {
   late Offset _offset;
 
   void updateOffset(DragUpdateDetails details) {
-    setState(() {
-      _offset += Offset(details.delta.dx, details.delta.dy);
-    });
+    setState(() { _offset += details.delta; });
   }
 
   @override

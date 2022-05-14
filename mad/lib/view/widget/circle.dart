@@ -19,8 +19,8 @@ class _CircleState extends State<Circle> {
     return GestureDetector(
       onTap: () => setState(() { widget.circle.setRandomColor(); }),
       child: Container(
-        width: widget.circle.size,
-        height: widget.circle.size,
+        width: widget.circle.size.toDouble(),
+        height: widget.circle.size.toDouble(),
         decoration:
             BoxDecoration(color: widget.circle.color, shape: BoxShape.circle),
       ),

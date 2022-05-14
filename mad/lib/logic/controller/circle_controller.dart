@@ -5,12 +5,12 @@ import 'package:mad/data/model/circle.dart';
 
 class CircleController extends GetxController {
   final CircleRepository _circleRepository = CircleRepository();
-  Status _status = Status.init;
+  State _status = State.init;
 
   List<Circle> circles = [];
 
   Future<void> getCircles() async {
-    _setStatus(Status.loading);
+    _setStatus(State.loading);
 
     try {
       final res = await _circleRepository.getAll();
@@ -20,13 +20,13 @@ class CircleController extends GetxController {
 
       circles = res;
 
-      _setStatus(Status.success);
+      _setStatus(State.success);
     } on Exception {
-      _setStatus(Status.faild);
+      _setStatus(State.faild);
     }
   }
 
-  void _setStatus(Status status) {
+  void _setStatus(State status) {
     _status = status;
     update();
   }

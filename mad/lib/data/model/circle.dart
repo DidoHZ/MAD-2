@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:flutter/widgets.dart';
 
 class Circle {
-  final double size;
+  final int size;
   Color color;
 
   Circle({
@@ -16,7 +16,7 @@ class Circle {
     final rand = Random();
 
     color = Color.fromRGBO(
-        rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), rand.nextDouble());
+        rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), 1);
   }
 
   Map<String, dynamic> toMap() {

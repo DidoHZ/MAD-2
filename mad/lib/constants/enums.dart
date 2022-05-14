@@ -1,4 +1,4 @@
-enum Status {
+enum State {
   init,
   loading,
   success,

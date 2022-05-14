@@ -19,9 +19,8 @@ class Circles extends StatelessWidget {
       alignment: alignmentDirectional,
       children: List.generate(
           childrens.length,
-          (index) => Circle(
-                circle: childrens[index],
-              )),
+          (index) => Circle(circle: childrens[index],)
+      ),
     );
   }
 }
